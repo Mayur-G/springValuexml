@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+<!-- bean definitions here -->
+ 	
+ 	<!-- @Required annotation is deprecated , so we can use this bean -->
+ 	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+ 	
+ 	<context:annotation-config/>
+ 	<context:property-placeholder location="classpath:student.properties"/>
+ 	
+ 	<!-- 
+	<bean id="student" class="springxml4.springValuexml.Student">
+		<property name="rollNo" value="${student.rollNo}" />
+		<property name="name" value="${student.name}"/>
+		<property name="description" value="${student.description}"/>
+	</bean>
+	 -->
+	 
+	 <!-- using @Value -->
+	<bean id="student" class="springxml4.springValuexml.Student">
+		
+	</bean>
+		
+</beans>

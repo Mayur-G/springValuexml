@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- bean definitions here -->
+
+<!-- Inner Bean & setter injection -->	
+	
+	<!-- Object we're calling two times -->
+	<!--  
+	<bean id="student" class="com.springxml3.Student">
+		<property name="id" value="1001"/>
+		<property name="mathCheat">
+			<bean class="com.springxml3.MathCheat"></bean>
+		</property>
+	</bean>
+	
+	<bean id="anotherStudent" class="com.springxml3.AnotherStudent">
+		<property name="cheat">
+			<bean class="com.springxml3.MathCheat"></bean>
+		</property>
+	</bean>
+	 -->
+	 
+	 <!-- Another way , object we're calling one time -->
+	 <!-- 
+	<bean id="mathCheatObjectValue" class="com.springxml3.MathCheat"></bean>
+	
+	<bean id="scienceCheatObjectValue" class="com.springxml3.ScienceCheat"></bean>
+	
+	<bean id="student" class="com.springxml3.Student">
+		<property name="id" value="1001"/>
+		<property name="mathCheat" ref="mathCheatObjectValue"/>
+	</bean>
+	
+	<bean id="anotherStudent" class="com.springxml3.AnotherStudent">
+		<property name="cheat" ref="mathCheatObjectValue"/>
+	</bean>
+	 -->
+	 
+	 <bean id="mathCheatObjectValue" class="com.springxml3.MathCheat"></bean>
+	
+	<bean id="scienceCheatObjectValue" class="com.springxml3.ScienceCheat"></bean>
+	
+	<bean id="javaCheatObjectValue" class="com.springxml3.JavaCheat"></bean>
+	
+	<bean id="student" class="com.springxml3.Student">
+		<property name="cheat" ref="javaCheatObjectValue"/>
+	</bean>
+	
+	 
+	 
+	 
+	
+</beans>
